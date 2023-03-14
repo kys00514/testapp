@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
                 // ib.setImageDrawable(getResources().getDrawable(R.drawable.cat1));
                 Bitmap bmp = BitmapFactory.decodeResource(getResources(),
                         R.drawable.img1);
-                int width = 300;
-                int height = 300;
+                int width = 400;
+                int height = 400;
                 Bitmap resizedbitmap = Bitmap.createScaledBitmap(bmp, width,
                         height, true);
                 ib.setImageBitmap(resizedbitmap);
