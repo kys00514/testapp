@@ -6,11 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <ImageView
-        android:id="@+id/imageView2"
+
+    <TextView
+        android:id="@+id/welcometext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo2"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="139dp" />
+
+        android:text="함께 칠해가는 미래,\n감탄프로젝트: COlour에\n오신것을 환영합니다."
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="34dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
