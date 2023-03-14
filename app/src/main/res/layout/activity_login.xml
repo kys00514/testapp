@@ -11,8 +11,41 @@
         android:id="@+id/welcometext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:textSize="19sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
         android:text="함께 칠해가는 미래,\n감탄프로젝트: COlour에\n오신것을 환영합니다."
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="34dp" />
+      />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/welcometext"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/box_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="textEmailAddress"
+        android:border="1dp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="181dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_border"
+        android:ems="15"
+        android:border="1dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="250dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
