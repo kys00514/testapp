@@ -12,19 +12,16 @@
         android:theme="@style/Theme.DOstandard"
         tools:targetApi="31">
         <activity
+            android:name=".writeActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:label=""
-            >
-
-        </activity>
+            android:label=""></activity>
         <activity
             android:name=".SplashActivity"
             android:exported="true"
-            android:theme="@style/CustomTheme"
-
-
-            >
+            android:theme="@style/CustomTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,8 +31,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/main"
-            ></activity>
+            android:theme="@style/main" />
     </application>
 
 </manifest>

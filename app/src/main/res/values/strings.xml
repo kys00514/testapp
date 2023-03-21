@@ -2,5 +2,6 @@
     <string name="app_name">DOstandard</string>
     <string name="text1"><b>활동 인증마당</b></string>
     <string name="text2"><b>오늘의 친환경 소식</b></string>
+    <string name="text3"><b>이벤트</b></string>
 
 </resources>
