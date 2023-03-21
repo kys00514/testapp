@@ -1,10 +1,12 @@
 package com.example.dostandard;
 
+import android.graphics.drawable.Drawable;
+
 public class DataPage {
     int color;
-    String title;
+    Drawable title;
 
-    public DataPage(int color, String title){
+    public DataPage(int color, Drawable title){
         this.color = color;
         this.title = title;
     }
@@ -17,11 +19,9 @@ public class DataPage {
         this.color = color;
     }
 
-    public String getTitle() {
+    public Drawable getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+
 }
