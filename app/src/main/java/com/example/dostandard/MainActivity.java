@@ -5,19 +5,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.ProgressBar;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.Toast;
@@ -43,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
             tr.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.FILL_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
             for (int j = 0; j < 2; j++) {
                 ImageButton ib = new ImageButton(this);
-                // ib.setImageDrawable(getResources().getDrawable(R.drawable.cat1));
+                ib.setBackgroundColor(getColor(R.color.white));
+
                 Bitmap bmp = BitmapFactory.decodeResource(getResources(),
                         R.drawable.img1);;
                 if(i==0 && j==0) {
@@ -69,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
                 ib.setImageBitmap(resizedbitmap);
                 ib.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
                 tr.addView(ib);
+                ((ViewGroup.MarginLayoutParams) ib.getLayoutParams()).topMargin = -15;
+                ((ViewGroup.MarginLayoutParams) ib.getLayoutParams()).rightMargin = 15;
+                ((ViewGroup.MarginLayoutParams) ib.getLayoutParams()).leftMargin = 15;
             }
             sv.addView(tr);
         }
@@ -109,8 +117,8 @@ public class MainActivity extends AppCompatActivity {
                 )
         );
         tabLayoutMediator.attach();
-
-
+        ProgressBar progressBar=findViewById(R.id.progress2);
+        progressBar.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
 
     }
 

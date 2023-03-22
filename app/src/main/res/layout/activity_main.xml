@@ -8,7 +8,7 @@
     <RelativeLayout
         android:id="@+id/start_button"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="300dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -16,14 +16,51 @@
         android:layout_marginStart="12dp"
         android:layout_marginBottom="8dp">
 
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="91dp"
+            android:layout_height="74dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/profile" />
+
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:includeFontPadding="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:text="@string/name" />
 
-            android:text="회원 등록"
-            android:textSize="21dp" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="130dp"
+            android:layout_marginStart="10dp"
+            android:text="lv.15" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="130dp"
+            android:layout_marginStart="350dp"
+            android:text="lv.16" />
+
+        <ProgressBar
+            android:id="@+id/progress2"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:layout_width="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_height="wrap_content"
+            android:progress="25" />
 
     </RelativeLayout>
 
@@ -70,6 +107,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+
                     app:layout_constraintTop_toBottomOf="@id/linear1"
                     >
                 </TableLayout>

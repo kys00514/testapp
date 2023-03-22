@@ -3,6 +3,7 @@
     <string name="text1"><b>활동 인증마당</b></string>
     <string name="text2"><b>오늘의 친환경 소식</b></string>
     <string name="text3"><b>이벤트</b></string>
+    <string name="name"><b>Colour_Kim</b></string>
     <string-array name="languages">
         <item>카테고리</item>
         <item>다회용품 사용하기</item>
