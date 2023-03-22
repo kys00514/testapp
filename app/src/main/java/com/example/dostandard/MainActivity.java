@@ -9,12 +9,14 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -25,8 +27,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 
-import me.relex.circleindicator.CircleIndicator;
-import me.relex.circleindicator.CircleIndicator3;
+
 
 public class MainActivity extends AppCompatActivity {
         Intent intent;
@@ -44,7 +45,23 @@ public class MainActivity extends AppCompatActivity {
                 ImageButton ib = new ImageButton(this);
                 // ib.setImageDrawable(getResources().getDrawable(R.drawable.cat1));
                 Bitmap bmp = BitmapFactory.decodeResource(getResources(),
-                        R.drawable.img1);
+                        R.drawable.img1);;
+                if(i==0 && j==0) {
+                     bmp = BitmapFactory.decodeResource(getResources(),
+                            R.drawable.img1);
+                }
+                if(i==0 && j==1) {
+                    bmp = BitmapFactory.decodeResource(getResources(),
+                            R.drawable.img2);
+                }
+                if(i==1 && j==0) {
+                     bmp = BitmapFactory.decodeResource(getResources(),
+                            R.drawable.img3);
+                }
+                if(i==1 && j==1) {
+               bmp = BitmapFactory.decodeResource(getResources(),
+                            R.drawable.img4);
+                }
                 int width = 400;
                 int height = 400;
                 Bitmap resizedbitmap = Bitmap.createScaledBitmap(bmp, width,
@@ -69,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
         Drawable e1 = getResources().getDrawable(R.drawable.dotswipe1);
         Drawable e2 = getResources().getDrawable(R.drawable.dotswipe1);
 
-
         ArrayList<DataPage> list = new ArrayList<>();
         list.add(new DataPage(android.R.color.black, d));
         list.add(new DataPage(android.R.color.holo_red_light, d1));
@@ -84,9 +100,18 @@ public class MainActivity extends AppCompatActivity {
         list1.add(new DataPage(android.R.color.holo_green_dark, e2));
 
         viewPager3.setAdapter(new ViewPagerAdapter(list1));
+        TabLayout tabLayout=findViewById(R.id.tab_layout);
+        TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(
+                tabLayout,
+                viewPager3,
+                (tab, position) -> tab.setIcon(getDrawable(R.drawable.selected_dot))
+        );
+        tabLayoutMediator.attach();
+
 
 
     }
+
 
     public void write(View view){
 
