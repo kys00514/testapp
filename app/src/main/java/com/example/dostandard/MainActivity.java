@@ -104,7 +104,9 @@ public class MainActivity extends AppCompatActivity {
         TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(
                 tabLayout,
                 viewPager3,
-                (tab, position) -> tab.setIcon(getDrawable(R.drawable.selected_dot))
+                (tab, position) -> tab.setIcon(getDrawable(R.drawable.selected_dot)
+
+                )
         );
         tabLayoutMediator.attach();
 
