@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
@@ -12,6 +13,8 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextThemeWrapper;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -124,10 +127,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void write(View view){
+        Context wrapper = new ContextThemeWrapper(this, R.style.MyPopupMenu);
+        PopupMenu popup = new PopupMenu(wrapper, view);
 
-        final PopupMenu popupMenu = new PopupMenu(getApplicationContext(),view);
-        getMenuInflater().inflate(R.menu.popup,popupMenu.getMenu());
-        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+        getMenuInflater().inflate(R.menu.popup,popup.getMenu());
+
+
+        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
 
 
             @Override
@@ -141,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-        popupMenu.show();
+        popup.show();
     }
 
 }
