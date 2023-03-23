@@ -137,7 +137,8 @@ public class MainActivity extends AppCompatActivity {
         ImageView img=(ImageView) findViewById(R.id.menu);
         mList=new ListPopupWindow(this);
         mList.setWidth(300);
-        mList.setHeight(300);
+        mList.setHeight(700);
+        mList.setBackgroundDrawable(getDrawable(R.drawable.popupmenu_background));
         mList.setAnchorView(img);
         mList.setAdapter(new ArrayAdapter<String>(this,R.layout.menus,Colors));
         mList.setModal(true);
