@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent;
         ListPopupWindow mList;
         public String[] Colors={
-          "red","green"
+          "인증 글쓰기","피드 글쓰기"
         };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,10 +136,12 @@ public class MainActivity extends AppCompatActivity {
         progressBar.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
         ImageView img=(ImageView) findViewById(R.id.menu);
         mList=new ListPopupWindow(this);
-        mList.setWidth(300);
-        mList.setHeight(700);
+        mList.setWidth(400);
+
         mList.setBackgroundDrawable(getDrawable(R.drawable.popupmenu_background));
+        intent= new Intent(this,writeActivity.class);
         mList.setAnchorView(img);
+
         mList.setAdapter(new ArrayAdapter<String>(this,R.layout.menus,Colors));
         mList.setModal(true);
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -147,7 +149,8 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch(position){
                     case 0:
-                        Log.v("hi","hi");
+
+                       startActivity(intent);
                         break;
                     case 1:
                         Log.v("hi1","hi1");

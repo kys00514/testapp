@@ -4,6 +4,7 @@
     <string name="text2"><b>오늘의 친환경 소식</b></string>
     <string name="text3"><b>이벤트</b></string>
     <string name="name"><b>Colour_Kim</b></string>
+    <string name="upload"><b>활동이 업로드 되었습니다!</b></string>
     <string name="today"><b>오늘의 미션</b></string>
     <string name="trans">transparent</string>
     <string-array name="languages">
