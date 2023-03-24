@@ -25,6 +25,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -142,6 +143,12 @@ public class MainActivity extends AppCompatActivity {
         intent= new Intent(this,writeActivity.class);
         mList.setAnchorView(img);
 
+
+
+
+
+
+        //mList.setAdapter(adapter);
         mList.setAdapter(new ArrayAdapter<String>(this,R.layout.menus,Colors));
         mList.setModal(true);
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
