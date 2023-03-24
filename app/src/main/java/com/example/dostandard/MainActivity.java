@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         mList=new ListPopupWindow(this);
         mList.setWidth(400);
 
-        mList.setBackgroundDrawable(getDrawable(R.drawable.popupmenu_background));
+
         intent= new Intent(this,writeActivity.class);
         mList.setAnchorView(img);
 
