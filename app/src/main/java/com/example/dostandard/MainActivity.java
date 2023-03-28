@@ -67,10 +67,10 @@ public class MainActivity extends AppCompatActivity {
         int cdp=pxToDp(height1);
         int cdp1=pxToDp(width1);
         Configuration configuration = this.getResources().getConfiguration();
-        int screenWidthDp = configuration.screenWidthDp; //The current width of the available screen space, in dp units, corresponding to screen width resource qualifier.
+        int screenWidthDp = configuration.screenHeightDp; //The current width of the available screen space, in dp units, corresponding to screen width resource qualifier.
         int smallestScreenWidthDp = configuration.smallestScreenWidthDp;
-        String d=screenWidthDp+ " "+smallestScreenWidthDp;
-        Log.v("asdf",d);
+        String dd1=screenWidthDp+ " "+smallestScreenWidthDp;
+        Log.v("asdf",dd1);
 
         String a=Integer.toString(cdp);
         String b=Integer.toString(cdp1);
