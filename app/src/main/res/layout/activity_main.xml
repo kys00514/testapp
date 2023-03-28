@@ -8,10 +8,11 @@
 
     <RelativeLayout
         android:id="@+id/start_button"
+        android:background="@drawable/maintopborder"
         android:layout_width="match_parent"
-        android:layout_height="310dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
+        android:layout_height="421dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,10 +21,10 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="91dp"
-            android:layout_height="74dp"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="60dp"
             app:srcCompat="@drawable/profile" />
 
         <TextView
@@ -31,7 +32,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="100dp"
+
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="170dp"
             android:text="@string/name" />
 
         <TextView
@@ -39,8 +42,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="190dp"
+
             android:text="lv.15" />
 
         <TextView
@@ -49,26 +52,28 @@
             android:layout_height="wrap_content"
 
             android:layout_marginStart="350dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="190dp"
             android:text="lv.16" />
 
         <ProgressBar
             android:id="@+id/progress2"
             style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="140dp"
-            android:layout_marginEnd="5dp"
+
+
+            android:layout_marginTop="218dp"
+
             android:progress="75" />
 
         <LinearLayout
-            android:layout_width="185dp"
-            android:layout_height="135dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="170dp"
-            android:layout_marginEnd="5dp"
+            android:layout_width="186dp"
+            android:layout_height="142dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="254dp"
+            android:layout_marginEnd="0dp"
+
             android:background="@drawable/layout_bg"
             android:orientation="vertical">
 
@@ -137,39 +142,41 @@
 
             </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/transparent"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@android:color/transparent"
-                android:text="@string/today1"
-                android:textColor="@color/white"
+                android:orientation="horizontal">
 
-                android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/today1"
+                    android:textColor="@color/white"
+
+                    android:textSize="15dp" />
 
 
-        </LinearLayout>
-
+            </LinearLayout>
 
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="185dp"
-            android:layout_height="135dp"
-            android:layout_marginStart="200dp"
-            android:layout_marginTop="170dp"
-            android:layout_marginEnd="5dp"
+            android:layout_width="186dp"
+            android:layout_height="142dp"
+            android:layout_marginStart="216dp"
+            android:layout_marginTop="254dp"
+
             android:background="@drawable/layout_bg1"
+
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
 
@@ -186,9 +193,9 @@
                     android:layout_marginTop="2dp"
                     android:background="@android:color/transparent"
                     android:text="@string/today2"
-                android:textColor="@color/white"
+                    android:textColor="@color/white"
 
-                android:textSize="15dp" />
+                    android:textSize="15dp" />
 
                 <ImageView
                     android:id="@+id/menu2"
@@ -200,6 +207,7 @@
 
                     />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -215,25 +223,22 @@
                     android:layout_marginStart="-11dp"
                     android:background="@android:color/transparent"
                     app:srcCompat="@drawable/coins" />
+
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="45dp"
                     android:layout_marginStart="10dp"
-                    android:textSize="25dp"
+                    android:layout_marginTop="45dp"
                     android:background="@android:color/transparent"
                     android:text="@string/today3"
                     android:textColor="@color/white"
+                    android:textSize="25dp"
 
-                     />
-
+                    />
 
 
             </LinearLayout>
-
-
-
 
 
         </LinearLayout>
