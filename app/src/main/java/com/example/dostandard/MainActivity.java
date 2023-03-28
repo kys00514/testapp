@@ -7,6 +7,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -65,6 +66,11 @@ public class MainActivity extends AppCompatActivity {
         int width1 = displayMetrics.widthPixels;
         int cdp=pxToDp(height1);
         int cdp1=pxToDp(width1);
+        Configuration configuration = this.getResources().getConfiguration();
+        int screenWidthDp = configuration.screenWidthDp; //The current width of the available screen space, in dp units, corresponding to screen width resource qualifier.
+        int smallestScreenWidthDp = configuration.smallestScreenWidthDp;
+        String d=screenWidthDp+ " "+smallestScreenWidthDp;
+        Log.v("asdf",d);
 
         String a=Integer.toString(cdp);
         String b=Integer.toString(cdp1);
