@@ -21,9 +21,9 @@
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="wrap_content"
+        android:layout_width="380dp"
         android:layout_height="45dp"
-        android:ems="18"
+
         android:layout_marginTop="45dp"
         app:layout_constraintTop_toBottomOf="@id/welcometext"
         android:minHeight="50dp"
@@ -37,7 +37,7 @@
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="wrap_content"
+        android:layout_width="380dp"
         android:layout_height="45dp"
         android:background="@drawable/box_border"
         android:ems="18"
@@ -52,7 +52,7 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="380dp"
         android:layout_height="57dp"
         android:layout_marginTop="15dp"
 
@@ -156,9 +156,59 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/textView9"
         android:layout_marginTop="50dp"
+        android:background="@color/white"
         android:text="SNS 계정으로 간편 로그인"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        >
+        <ImageView
+            android:id="@+id/check1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/kako" />
+        <ImageView
+            android:id="@+id/check2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/naver" />
+
+        <ImageView
+            android:id="@+id/check3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/facebook" />
+
+        <ImageView
+            android:id="@+id/check4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:srcCompat="@drawable/google" />
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

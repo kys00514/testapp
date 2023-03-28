@@ -6,6 +6,10 @@
     <string name="name"><b>Colour_Kim</b></string>
     <string name="upload"><b>활동이 업로드 되었습니다!</b></string>
     <string name="today"><b>오늘의 미션</b></string>
+    <string name="today1"><b>미션 올 클리어!</b></string>
+    <string name="today2"><b>내 포인트</b></string>
+    <string name="today3"><b>1,530</b></string>
+
     <string name="trans">transparent</string>
     <string-array name="languages">
         <item>카테고리</item>

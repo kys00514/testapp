@@ -37,6 +37,9 @@ public class LoginActivity extends AppCompatActivity {
         spannableString.setSpan(new StyleSpan(Typeface.BOLD), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         spannableString.setSpan(new RelativeSizeSpan(1.3f), start, end, SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
         text.setText(spannableString);
+        TextView login=findViewById(R.id.textView10);
+        login.bringToFront();
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

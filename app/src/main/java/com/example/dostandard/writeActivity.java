@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -17,6 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewGroupOverlay;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -73,7 +76,13 @@ public class writeActivity extends AppCompatActivity {
         popupWindow.setClippingEnabled(false);
         popupWindow.setAnimationStyle(android.R.style.Animation_Translucent);
         popupWindow.setBackgroundDrawable(colorDrawable);
+        ViewGroup parent = (ViewGroup) getWindow().getDecorView().getRootView();
+        Drawable dim = new ColorDrawable(Color.BLACK);
+        dim.setBounds(0, 0, parent.getWidth(), parent.getHeight());
+        dim.setAlpha((int) (255 * 0.3));
 
+        ViewGroupOverlay overlay = parent.getOverlay();
+        overlay.add(dim);
 
         // show the popup window
         // which view you pass in doesn't matter, it is only used for the window tolken

@@ -66,25 +66,25 @@ public class MainActivity extends AppCompatActivity {
                 ib.setBackgroundColor(getColor(R.color.white));
 
                 Bitmap bmp = BitmapFactory.decodeResource(getResources(),
-                        R.drawable.img1);;
+                        R.drawable.list1);;
                 if(i==0 && j==0) {
                      bmp = BitmapFactory.decodeResource(getResources(),
-                            R.drawable.img1);
+                            R.drawable.list1);
                 }
                 if(i==0 && j==1) {
                     bmp = BitmapFactory.decodeResource(getResources(),
-                            R.drawable.img2);
+                            R.drawable.list3);
                 }
                 if(i==1 && j==0) {
                      bmp = BitmapFactory.decodeResource(getResources(),
-                            R.drawable.img3);
+                            R.drawable.list2);
                 }
                 if(i==1 && j==1) {
                bmp = BitmapFactory.decodeResource(getResources(),
-                            R.drawable.img4);
+                            R.drawable.list4);
                 }
-                int width = 400;
-                int height = 400;
+                int width = 500;
+                int height = 500;
                 Bitmap resizedbitmap = Bitmap.createScaledBitmap(bmp, width,
                         height, true);
                 ib.setImageBitmap(resizedbitmap);
