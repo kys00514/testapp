@@ -415,20 +415,24 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:src="@drawable/icon1"
                 />
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:src="@drawable/icon2"
                 />
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:src="@drawable/icon3"
                 />
             <ImageView
                 android:layout_width="80dp"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon4"
                 />
@@ -439,6 +443,7 @@
                 android:src="@drawable/icon5"
                 android:clickable="true"
                 android:focusable="true"
+                android:layout_gravity="center"
                 android:onClick="write"
                 />
 

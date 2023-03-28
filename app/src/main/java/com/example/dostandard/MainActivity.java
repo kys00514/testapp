@@ -7,6 +7,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -62,8 +63,11 @@ public class MainActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int height1 = displayMetrics.heightPixels;
         int width1 = displayMetrics.widthPixels;
-        String a=Integer.toString(height1);
-        String b=Integer.toString(width1);
+        int cdp=pxToDp(height1);
+        int cdp1=pxToDp(width1);
+
+        String a=Integer.toString(cdp);
+        String b=Integer.toString(cdp1);
         String c=a+" "+b;
 
         Log.v("metrics112",c);
@@ -195,6 +199,11 @@ public class MainActivity extends AppCompatActivity {
     public int dpToPx(float dp, Context context) {
         float density = context.getResources().getDisplayMetrics().density;
         return Math.round(dp * density);
+    }
+    public int pxToDp(int px) {
+        DisplayMetrics displayMetrics = Resources.getSystem().getDisplayMetrics();
+        int dp = Math.round(px / (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
+        return dp;
     }
 
 }
