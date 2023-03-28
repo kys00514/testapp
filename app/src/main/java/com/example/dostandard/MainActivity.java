@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayoutMediator.attach();
         ProgressBar progressBar=findViewById(R.id.progress2);
         progressBar.setProgressTintList(ColorStateList.valueOf(Color.GREEN));
-        ImageView img=(ImageView) findViewById(R.id.menu);
+        ImageView img= findViewById(R.id.menu);
         mList=new ListPopupWindow(this);
         mList.setWidth(400);
 
