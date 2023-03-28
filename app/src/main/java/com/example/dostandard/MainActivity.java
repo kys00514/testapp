@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.text.Layout;
 import android.text.SpannableString;
 import android.text.style.AlignmentSpan;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
@@ -53,9 +54,19 @@ public class MainActivity extends AppCompatActivity {
         };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
          intent=new Intent(this,writeActivity.class);
         setContentView(R.layout.activity_main);
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int height1 = displayMetrics.heightPixels;
+        int width1 = displayMetrics.widthPixels;
+        String a=Integer.toString(height1);
+        String b=Integer.toString(width1);
+        String c=a+" "+b;
+
+        Log.v("metrics112",c);
         TableLayout sv = (TableLayout) findViewById(R.id.categoryLinearLayout1);
 
         for (int i = 0; i < 2; i++) {
@@ -83,10 +94,12 @@ public class MainActivity extends AppCompatActivity {
                bmp = BitmapFactory.decodeResource(getResources(),
                             R.drawable.list4);
                 }
+                float dp=180;
+                int aa=dpToPx(dp,this);
                 int width = 500;
                 int height = 500;
-                Bitmap resizedbitmap = Bitmap.createScaledBitmap(bmp, width,
-                        height, true);
+                Bitmap resizedbitmap = Bitmap.createScaledBitmap(bmp, aa,
+                        aa, true);
                 ib.setImageBitmap(resizedbitmap);
                 ib.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
                 tr.addView(ib);
@@ -178,6 +191,10 @@ public class MainActivity extends AppCompatActivity {
        else{
            mList.show();
        }
+    }
+    public int dpToPx(float dp, Context context) {
+        float density = context.getResources().getDisplayMetrics().density;
+        return Math.round(dp * density);
     }
 
 }
